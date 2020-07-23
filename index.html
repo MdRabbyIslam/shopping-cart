@@ -30,20 +30,20 @@
                 <!-- *item 1 -->
                 <div class="col-md-5 center-item">
                   <div class="input-group number-spinner">
-                    <button class="btn btn-default" id="first-item-plus-btn">
-                      <!--*here is item-one-plus id button-->
+                    <button class="btn btn-default" id="first-item-minus-btn">
+                      <!--*here is item-one-minus id button-->
                       <i class="fas fa-minus"></i>
                     </button>
                     <!--* here is num-of-buying-item-first id-->
                     <input
-                      id="num-of-buying-item-of-first-item"
+                      id="num-of-buying-first-item"
                       type="text"
                       class="form-control text-center"
                       value="1"
                     />
 
-                    <button class="btn btn-default" id="first-item-minus-btn">
-                      <!--*here is item-one-minus id button-->
+                    <button class="btn btn-default" id="first-item-plus-btn">
+                      <!--*here is item-one-plus id button-->
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
@@ -52,7 +52,7 @@
                 </div>
               </div>
             </div>
-
+            <!-- *item 2 -->
             <div class="cart-item">
               <div class="row">
                 <div class="col-md-7 center-item mx-auto">
@@ -61,15 +61,19 @@
                 </div>
                 <div class="col-md-5 center-item">
                   <div class="input-group number-spinner">
-                    <button class="btn btn-default">
+                    <!-- *second item minus button -->
+                    <button class="btn btn-default" id="second-item-minus-btn">
                       <i class="fas fa-minus"></i>
                     </button>
+                    <!-- * second item buying number -->
                     <input
+                      id="num-of-buying-second-item"
                       type="text"
                       class="form-control text-center"
                       value="1"
                     />
-                    <button class="btn btn-default">
+                    <!-- *second item plus button -->
+                    <button class="btn btn-default" id="second-item-plus-btn">
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
