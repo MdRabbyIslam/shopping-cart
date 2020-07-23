@@ -6,8 +6,6 @@ const firstItemMinusBtn = document.getElementById("first-item-minus-btn");
 const secondItemPlusBtn = document.getElementById("second-item-plus-btn");
 const secondItemMinusBtn = document.getElementById("second-item-minus-btn");
 
-//* increasing and decreasing buying number of first item
-
 //todo essential functions
 
 //* function of increament items number
@@ -39,28 +37,47 @@ function changingItemPrice(id, incrementOrDecrement, price) {
   const pricecValue = parseInt(priceContainer.innerHTML);
   const incresedAmount = incrementOrDecrement(pricecValue, price);
   priceContainer.innerHTML = incresedAmount;
+  return priceContainer.innerHTML;
 }
 
-//todo first plus and minus button handler
+//*function of adding total amount
 
+function totalAmount(id, input, incrementOrDecrement) {
+  const subtotalContainer = document.getElementById(id);
+  const subtotalValue = parseInt(subtotalContainer.innerText);
+  console.log("subtotalvalue", subtotalValue, typeof subtotalValue);
+  const subtotal = incrementOrDecrement(subtotalValue, input);
+  subtotalContainer.innerHTML = subtotal;
+}
+
+//todo first plus and minus button handling
+
+//*first plus button handeling
 firstItemPlusBtn.addEventListener("click", () => {
   ChangingNumberOfBuyingItem("num-of-buying-first-item", incrementingValue);
   changingItemPrice("first-item-price", incrementingValue, 1219);
+  totalAmount("sub-total-price", 1219, incrementingValue);
 });
 
+//* first minus button handeling
 firstItemMinusBtn.addEventListener("click", () => {
   ChangingNumberOfBuyingItem("num-of-buying-first-item", discrementingValue);
   changingItemPrice("first-item-price", discrementingValue, 1219);
+  totalAmount("sub-total-price", 1219, discrementingValue);
 });
 
 //todo second plus and minus button handler
 
+//* second plus button handleing
 secondItemPlusBtn.addEventListener("click", () => {
   ChangingNumberOfBuyingItem("num-of-buying-second-item", incrementingValue);
   changingItemPrice("second-item-price", incrementingValue, 59);
+  totalAmount("sub-total-price", 59, incrementingValue);
 });
 
+//* second minus button handeling
 secondItemMinusBtn.addEventListener("click", () => {
   ChangingNumberOfBuyingItem("num-of-buying-second-item", discrementingValue);
   changingItemPrice("second-item-price", discrementingValue, 59);
+  totalAmount("sub-total-price", 59, discrementingValue);
 });
